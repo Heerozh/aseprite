@@ -9,7 +9,7 @@ jobs:
         os: [windows-latest]
         build_type: [Release]
         ui: [gui]
-        scripting: [lua, noscripts]
+        scripting: [lua]
         exclude:
           - build_type: Debug
             ui: gui
@@ -95,5 +95,6 @@ jobs:
       with:
         name: aseprite-${{ matrix.runs-on }}
         path: |
+          libcrypto-1_1-x64.dll
           D:/a/aseprite/aseprite/build/bin/data
           D:/a/aseprite/aseprite/build/bin/aseprite.exe
